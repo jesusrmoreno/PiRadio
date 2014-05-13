@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,300', rel='stylesheet', type='text/css')
+
+		script(language="javascript", type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js")
+
+		script(language="javascript", type="text/javascript", src="/socket.io/socket.io.js")
+
+		script(language="javascript", type="text/javascript", src="javascripts/controller-client.js")
+
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+		body(ontouchstart="")
+			block content
