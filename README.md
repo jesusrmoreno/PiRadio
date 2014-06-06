@@ -7,7 +7,6 @@ For now there are a couple things that you have to do manually such as set your 
 
 
 In the controller-client.js file located under /public/javascripts/:
-
 ```javascript
 var socket = io.connect('http://192.168.1.13:3000'); 
 ```
@@ -15,7 +14,6 @@ var socket = io.connect('http://192.168.1.13:3000');
 You also have to set the absolute path for your fifo and for the dataFile.
 
 In the app.js file: 
-
 ```javascript
 var fifoPath = '/Users/pi/pianobar/ctl'; //Remove hard coded path 
 var dataFile = '/Users/pi/Desktop/TabardRadio/out'; //Remove hard coded path
