@@ -1,8 +1,10 @@
 $(document).ready(function() {
+	
 	function getRandomInt(min, max) {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
-	var socket = io.connect('http://192.168.1.13:3000');
+
+	var socket = io.connect('http://localhost:3000'); //Change IP Address accordingly
 	var pausebtn = $('#pause-btn');
 	var stationbtn = $('#station-btn');
 	var skipbtn = $('#skip-btn');
@@ -41,12 +43,7 @@ $(document).ready(function() {
 				background: 'url('+ albumartData +') no-repeat center center fixed',
 				'-webkit-background-size': 'cover'
 			});
-
-
-
-		// 	background: url(images/bg.jpg) no-repeat center center fixed; 
-  // -webkit-background-size: cover;
-
+			
 		} else {
 			console.log("There is a problem:", data);
 		}
