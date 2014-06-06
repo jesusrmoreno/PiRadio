@@ -4,6 +4,8 @@ PiRadio ver(0.1.0)
 # What it is:
 A web-interface to control Pianobar. Written using Node.js. I was tired of having to get up to change the song on Pianobar so I wrote something that I could use from my phone.
 
+![Screenshot](http://i.imgur.com/zJYYmhPl.png)
+
 # Install:
 run 
 git clone https://github.com/jesusrmoreno/PiRadio
