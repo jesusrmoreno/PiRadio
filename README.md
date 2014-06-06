@@ -43,7 +43,7 @@ esac
 ```
 add that to your eventcmd.sh and replace the path with your own path. 
 
-ToDo:
+# ToDo:
   1. Remove dependency on Express. An app this simple shouldn't have such a huge dependency. 
   2. Change HTML + CSS code to support all functions from pianobar menu. 
   3. Update UI
