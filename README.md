@@ -1,8 +1,21 @@
 PiRadio ver(0.1.0)
-==========
-Quick web-interface to control Pianobar. 
-Written in Node.js. 
+=========
 
+# What it is:
+A web-interface to control Pianobar. Written using Node.js. I was tired of having to get up to change the song on Pianobar so I wrote something that I could use from my phone.
+
+# Install:
+run 
+git clone https://github.com/jesusrmoreno/PiRadio
+
+**OR**
+
+Download as a zip
+Extract the folder and cd into it using the terminal. 
+
+Make sure you have node.js installed and run npm install.
+
+ 
 For now there are a couple things that you have to do manually such as set your ip address and the number of stations for the scanning button to work.
 
 
