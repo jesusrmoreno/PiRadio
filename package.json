@@ -1,6 +1,8 @@
 {
   "name": "PiRadio",
   "version": "0.1.0",
+  "description": "A simple web-interface for Pianobar.",
+  "author": "Jesus Moreno jesus.mor14@gmail.com",
   "private": true,
   "scripts": {
     "start": "node app.js"
