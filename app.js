@@ -1,4 +1,4 @@
-//Running on the Development branch
+// Running on the Development branch.
 
 // Module dependencies.
 var express = require('express');
@@ -8,14 +8,15 @@ var path = require('path');
 var fs = require('fs');
 var lineReader = require('line-reader');
 
-//Variables
+// Variables
 var shouldSend = true;
 var port = 3000;
 
+// Path files
+var fifoPath = '/Users/jesusfromthesky/pianobar/ctl'; // Remove hard coded path. 
+var dataFile = '/Users/jesusfromthesky/Desktop/TabardRadio/out'; // Remove hard coded path.
 
-var fifoPath = '/Users/jesusfromthesky/pianobar/ctl'; //Remove hard coded path 
-var dataFile = '/Users/jesusfromthesky/Desktop/TabardRadio/out'; //Remove hard coded path
-
+// 
 var app = express();
 var io = require('socket.io').listen(app.listen(port));
 
@@ -35,7 +36,7 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
-//Functions 
+// Functions 
 function readAndEmit (file, callback){
     var metadata = [];
     lineReader.eachLine(file, function(line, last) {
@@ -47,7 +48,7 @@ function readAndEmit (file, callback){
     });
 }
 
-//Routes
+// Routes
 app.get('/', routes.index);
 
 // Start Watching the dataFile
@@ -58,9 +59,9 @@ fs.watchFile(dataFile, function (curr, prev) {
 io.set('log level', 1);
 
 
-//On connection
+// On connection
 io.sockets.on('connection', function(socket) {
-    readAndEmit(dataFile); //Read the dataFile for song info.
+    readAndEmit(dataFile); // Read the dataFile for song info.
     socket.on('commandQueue', function(command) {
         fs.appendFile(fifoPath, command.value, function(err) {
             if (err) {
