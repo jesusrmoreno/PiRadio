@@ -72,5 +72,5 @@ io.sockets.on('connection', function(socket) {
 });
 
 http.createServer(app).listen(app.get('port'), function(){
-    console.log('PiRadio server listening on port ' + port);
+    console.log('PiRadio server listening on port: ' + port);
 });
